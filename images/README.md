@@ -4,10 +4,9 @@ Place your optimized photos here, then update `src` paths in the HTML files.
 
 ## Logo
 
-Add your logo file as **`logo.png`** (or `logo.svg`) in this folder.
+The header uses **`logo.svg`** — a square monogram with **SL**.
 
-- The site looks for `images/logo.png` first on every page.
-- Until you add `logo.png`, a simple placeholder shutter icon (`logo.svg`) is shown automatically.
+- To use a custom logo, replace `logo.svg` or add `logo.png` and update the `src` in each page header.
 - Recommended size: **about 320×128px** (or similar wide aspect ratio), transparent background if possible.
 - Formats: PNG, SVG, or WebP. If you use SVG only, rename or point the `src` in the HTML header to `images/logo.svg`.
 
