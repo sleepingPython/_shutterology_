@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Gallery of Shutterology plantation shutter installations — see our finished projects.">
+  <title>Gallery | Shutterology</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a href="index.html" class="brand">
+      <img
+        class="brand__logo"
+        src="images/logo.png"
+        alt="Shutterology"
+        width="160"
+        height="64"
+        onerror="this.onerror=null;this.src='images/logo.svg';"
+      >
+      <h1 class="brand__name">Shutterology</h1>
+      <p class="brand__tagline">Crafted Excellence</p>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">
+      <span class="nav-toggle__bar"></span>
+      <span class="nav-toggle__bar"></span>
+      <span class="nav-toggle__bar"></span>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+      <ul class="site-nav__list">
+        <li><a href="about.html" class="site-nav__link">About</a></li>
+        <li><a href="products.html" class="site-nav__link">Products</a></li>
+        <li><a href="gallery.html" class="site-nav__link is-active">Gallery</a></li>
+        <li><a href="blog.html" class="site-nav__link">Blog &amp; Testimonials</a></li>
+        <li><a href="contact.html" class="site-nav__link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="page-hero">
+      <h2>Our finished projects</h2>
+      <p class="page-hero__subtitle">See the quality and craftsmanship that goes into every installation. Click any photo to enlarge.</p>
+    </div>
+
+    <section class="section">
+      <div class="project-grid" data-lightbox>
+        <figure class="project-grid__item">
+          <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600&q=80&auto=format&fit=crop" alt="Living room with white plantation shutters" width="600" height="600" loading="lazy">
+        </figure>
+        <figure class="project-grid__item">
+          <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&q=80&auto=format&fit=crop" alt="Sunlit family room with custom shutters" width="600" height="600" loading="lazy">
+        </figure>
+        <figure class="project-grid__item">
+          <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=600&q=80&auto=format&fit=crop" alt="Detail of plantation shutter louvers" width="600" height="600" loading="lazy">
+        </figure>
+        <figure class="project-grid__item">
+          <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?w=600&q=80&auto=format&fit=crop" alt="Bedroom with wood-tone shutters" width="600" height="600" loading="lazy">
+        </figure>
+        <figure class="project-grid__item">
+          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80&auto=format&fit=crop" alt="Open-plan home with shuttered windows" width="600" height="600" loading="lazy">
+        </figure>
+        <figure class="project-grid__item">
+          <img src="https://images.unsplash.com/photo-1600575154084-56653da7f2b0?w=600&q=80&auto=format&fit=crop" alt="Kitchen window with vinyl shutters" width="600" height="600" loading="lazy">
+        </figure>
+        <figure class="project-grid__item">
+          <img src="https://images.unsplash.com/photo-1615529328331-f8917597711f?w=600&q=80&auto=format&fit=crop" alt="Bay window shutter installation" width="600" height="600" loading="lazy">
+        </figure>
+        <figure class="project-grid__item">
+          <img src="https://images.unsplash.com/photo-1600585152915-d208bec867a1?w=600&q=80&auto=format&fit=crop" alt="Minimal interior with full-height shutters" width="600" height="600" loading="lazy">
+        </figure>
+      </div>
+      <p class="text-center container" style="margin-top: 2.5rem; font-size: 0.9rem;">
+        Replace these placeholder photos with your own project images in the <code>images/gallery/</code> folder. See README for compression tips.
+      </p>
+    </section>
+
+    <section class="cta-band">
+      <h2>Love what you see?</h2>
+      <p>We can achieve the same finish in your home. Start with a free consultation.</p>
+      <a href="contact.html" class="btn btn--primary">Book a consultation</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <nav class="site-footer__nav" aria-label="Footer navigation">
+      <a href="about.html">About</a>
+      <a href="products.html">Products</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="blog.html">Blog</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <p class="site-footer__copy">&copy; <span id="year"></span> Shutterology. All rights reserved.</p>
+  </footer>
+
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  <script src="js/main.js"></script>
+</body>
+</html>

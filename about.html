@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About Shutterology — locally crafted plantation shutters with expert measure and install service.">
+  <title>About | Shutterology</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a href="index.html" class="brand">
+      <img
+        class="brand__logo"
+        src="images/logo.png"
+        alt="Shutterology"
+        width="160"
+        height="64"
+        onerror="this.onerror=null;this.src='images/logo.svg';"
+      >
+      <h1 class="brand__name">Shutterology</h1>
+      <p class="brand__tagline">Crafted Excellence</p>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">
+      <span class="nav-toggle__bar"></span>
+      <span class="nav-toggle__bar"></span>
+      <span class="nav-toggle__bar"></span>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+      <ul class="site-nav__list">
+        <li><a href="about.html" class="site-nav__link is-active">About</a></li>
+        <li><a href="products.html" class="site-nav__link">Products</a></li>
+        <li><a href="gallery.html" class="site-nav__link">Gallery</a></li>
+        <li><a href="blog.html" class="site-nav__link">Blog &amp; Testimonials</a></li>
+        <li><a href="contact.html" class="site-nav__link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="page-hero">
+      <h2>About Shutterology</h2>
+      <p class="page-hero__subtitle">Handcrafted plantation shutters, measured and installed with care for your home.</p>
+    </div>
+
+    <section class="section">
+      <div class="container container--narrow">
+        <p>Shutterology is a local plantation shutter specialist dedicated to quality craftsmanship and outstanding service. We believe the right shutters do more than cover a window — they elevate light, privacy, and the character of every room.</p>
+        <p>From your first consultation through final installation, our team works closely with you to choose materials, finishes, and louver sizes that suit your style and budget. Every shutter is made to measure for a precise, lasting fit.</p>
+        <p>Whether you're updating a single bay window or outfitting your entire home, we're here to guide you with honest advice and meticulous attention to detail.</p>
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="container">
+        <div class="section__header">
+          <h2>How we work</h2>
+          <p>A simple, stress-free process from start to finish</p>
+        </div>
+        <div class="process-steps">
+          <article class="process-step">
+            <h3>Consultation</h3>
+            <p>We visit your home, discuss your goals, and take precise measurements.</p>
+          </article>
+          <article class="process-step">
+            <h3>Design</h3>
+            <p>Choose wood or vinyl, colour, louver width, and tilt options.</p>
+          </article>
+          <article class="process-step">
+            <h3>Craft</h3>
+            <p>Your shutters are custom built to your exact specifications.</p>
+          </article>
+          <article class="process-step">
+            <h3>Install</h3>
+            <p>Our fitters install and adjust every panel for smooth operation.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <h2>Let's talk about your windows</h2>
+      <p>Book a free consultation — no obligation, just expert advice.</p>
+      <a href="contact.html" class="btn btn--primary">Get in touch</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <nav class="site-footer__nav" aria-label="Footer navigation">
+      <a href="about.html">About</a>
+      <a href="products.html">Products</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="blog.html">Blog</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <p class="site-footer__copy">&copy; <span id="year"></span> Shutterology. All rights reserved.</p>
+  </footer>
+
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  <script src="js/main.js"></script>
+</body>
+</html>

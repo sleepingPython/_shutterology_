@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shutterology products — custom wood and vinyl plantation shutters made to measure.">
+  <title>Products | Shutterology</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a href="index.html" class="brand">
+      <img
+        class="brand__logo"
+        src="images/logo.png"
+        alt="Shutterology"
+        width="160"
+        height="64"
+        onerror="this.onerror=null;this.src='images/logo.svg';"
+      >
+      <h1 class="brand__name">Shutterology</h1>
+      <p class="brand__tagline">Crafted Excellence</p>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">
+      <span class="nav-toggle__bar"></span>
+      <span class="nav-toggle__bar"></span>
+      <span class="nav-toggle__bar"></span>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+      <ul class="site-nav__list">
+        <li><a href="about.html" class="site-nav__link">About</a></li>
+        <li><a href="products.html" class="site-nav__link is-active">Products</a></li>
+        <li><a href="gallery.html" class="site-nav__link">Gallery</a></li>
+        <li><a href="blog.html" class="site-nav__link">Blog &amp; Testimonials</a></li>
+        <li><a href="contact.html" class="site-nav__link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="page-hero">
+      <h2>Our products</h2>
+      <p class="page-hero__subtitle">Plantation shutters tailored to your windows, your style, and your budget.</p>
+    </div>
+
+    <section class="section">
+      <div class="container">
+        <div class="product-grid">
+          <article class="product-card">
+            <h3>Wood shutters</h3>
+            <p>Premium hardwood shutters bring natural warmth and timeless elegance. Ideal for living rooms, bedrooms, and dining areas where beauty matters most.</p>
+            <p>Available in a range of painted and stained finishes. Custom louvers from 2½&quot; to 4½&quot;.</p>
+          </article>
+          <article class="product-card">
+            <h3>Vinyl shutters</h3>
+            <p>Durable, moisture-resistant vinyl is perfect for kitchens, bathrooms, and high-traffic spaces. Easy to clean and built to last.</p>
+            <p>Excellent value without compromising on look or fit. Multiple white and off-white tones available.</p>
+          </article>
+          <article class="product-card">
+            <h3>Special shapes</h3>
+            <p>Arches, circles, triangles, and angled windows — we craft shutters for unusual openings that standard blinds can't handle.</p>
+            <p>Every specialty shape is templated on site for a seamless result.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="container container--narrow">
+        <h2 class="text-center">Options &amp; features</h2>
+        <ul style="margin: 1.5rem 0 0; padding-left: 1.25rem; color: var(--color-text-muted);">
+          <li>Traditional and hidden tilt rods</li>
+          <li>Full height, tier-on-tier, and café style</li>
+          <li>Bi-fold and bypass track systems</li>
+          <li>UV-resistant finishes</li>
+          <li>Child-safe designs</li>
+          <li>Professional measure &amp; install included</li>
+        </ul>
+        <p class="text-center" style="margin-top: 2rem;">
+          <a href="contact.html" class="btn btn--primary">Request a consultation</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <nav class="site-footer__nav" aria-label="Footer navigation">
+      <a href="about.html">About</a>
+      <a href="products.html">Products</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="blog.html">Blog</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <p class="site-footer__copy">&copy; <span id="year"></span> Shutterology. All rights reserved.</p>
+  </footer>
+
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  <script src="js/main.js"></script>
+</body>
+</html>

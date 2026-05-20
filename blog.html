@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shutterology blog — tips and inspiration for plantation shutters and window treatments.">
+  <title>Blog | Shutterology</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a href="index.html" class="brand">
+      <img
+        class="brand__logo"
+        src="images/logo.png"
+        alt="Shutterology"
+        width="160"
+        height="64"
+        onerror="this.onerror=null;this.src='images/logo.svg';"
+      >
+      <h1 class="brand__name">Shutterology</h1>
+      <p class="brand__tagline">Crafted Excellence</p>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">
+      <span class="nav-toggle__bar"></span>
+      <span class="nav-toggle__bar"></span>
+      <span class="nav-toggle__bar"></span>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+      <ul class="site-nav__list">
+        <li><a href="about.html" class="site-nav__link">About</a></li>
+        <li><a href="products.html" class="site-nav__link">Products</a></li>
+        <li><a href="gallery.html" class="site-nav__link">Gallery</a></li>
+        <li><a href="blog.html" class="site-nav__link is-active">Blog &amp; Testimonials</a></li>
+        <li><a href="contact.html" class="site-nav__link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="page-hero">
+      <h2>Blog</h2>
+      <p class="page-hero__subtitle">Ideas, guides, and inspiration for your home</p>
+    </div>
+
+    <section class="section">
+      <div class="container container--narrow">
+        <ul class="blog-list">
+          <li class="blog-list__item">
+            <p class="blog-list__date">May 2026</p>
+            <h3 class="blog-list__title"><a href="blog/wood-vs-vinyl-shutters.html">Wood vs vinyl shutters: which is right for your home?</a></h3>
+            <p class="blog-list__excerpt">Compare durability, style, and cost to choose the best material for each room in your house.</p>
+            <a href="blog/wood-vs-vinyl-shutters.html" class="blog-list__link">Read more</a>
+          </li>
+          <li class="blog-list__item">
+            <p class="blog-list__date">April 2026</p>
+            <h3 class="blog-list__title"><a href="blog/plantation-shutter-care.html">How to care for plantation shutters</a></h3>
+            <p class="blog-list__excerpt">Simple cleaning and maintenance tips to keep your shutters looking beautiful for years.</p>
+            <a href="blog/plantation-shutter-care.html" class="blog-list__link">Read more</a>
+          </li>
+          <li class="blog-list__item">
+            <p class="blog-list__date">March 2026</p>
+            <h3 class="blog-list__title"><a href="blog/choosing-louver-size.html">Choosing the right louver size</a></h3>
+            <p class="blog-list__excerpt">From 2½&quot; to 4½&quot; — how louver width affects light, privacy, and the look of your room.</p>
+            <a href="blog/choosing-louver-size.html" class="blog-list__link">Read more</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="container">
+        <div class="section__header">
+          <h2>What our customers say</h2>
+          <p>Read more on our <a href="testimonials.html">testimonials page</a></p>
+        </div>
+        <div class="testimonial-grid">
+          <blockquote class="testimonial">
+            <p class="testimonial__quote">&ldquo;From measurement to installation, the team was professional and meticulous. Our living room looks completely transformed.&rdquo;</p>
+            <p class="testimonial__author">— Sarah M.</p>
+          </blockquote>
+          <blockquote class="testimonial">
+            <p class="testimonial__quote">&ldquo;We chose vinyl for the kitchen and wood for the bedrooms. Both look stunning and were fitted perfectly.&rdquo;</p>
+            <p class="testimonial__author">— James &amp; Priya K.</p>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <nav class="site-footer__nav" aria-label="Footer navigation">
+      <a href="about.html">About</a>
+      <a href="products.html">Products</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="blog.html">Blog</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <p class="site-footer__copy">&copy; <span id="year"></span> Shutterology. All rights reserved.</p>
+  </footer>
+
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  <script src="js/main.js"></script>
+</body>
+</html>

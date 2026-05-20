@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Shutterology — book a free plantation shutter consultation.">
+  <title>Contact | Shutterology</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a href="index.html" class="brand">
+      <img
+        class="brand__logo"
+        src="images/logo.png"
+        alt="Shutterology"
+        width="160"
+        height="64"
+        onerror="this.onerror=null;this.src='images/logo.svg';"
+      >
+      <h1 class="brand__name">Shutterology</h1>
+      <p class="brand__tagline">Crafted Excellence</p>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">
+      <span class="nav-toggle__bar"></span>
+      <span class="nav-toggle__bar"></span>
+      <span class="nav-toggle__bar"></span>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+      <ul class="site-nav__list">
+        <li><a href="about.html" class="site-nav__link">About</a></li>
+        <li><a href="products.html" class="site-nav__link">Products</a></li>
+        <li><a href="gallery.html" class="site-nav__link">Gallery</a></li>
+        <li><a href="blog.html" class="site-nav__link">Blog &amp; Testimonials</a></li>
+        <li><a href="contact.html" class="site-nav__link is-active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="page-hero">
+      <h2>Contact us</h2>
+      <p class="page-hero__subtitle">Book a free consultation or ask us a question</p>
+    </div>
+
+    <section class="section">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-info">
+            <div class="contact-info__item">
+              <p class="contact-info__label">Phone</p>
+              <p class="contact-info__value"><a href="tel:+15551234567">(555) 123-4567</a></p>
+            </div>
+            <div class="contact-info__item">
+              <p class="contact-info__label">Email</p>
+              <p class="contact-info__value"><a href="mailto:hello@shutterology.com">hello@shutterology.com</a></p>
+            </div>
+            <div class="contact-info__item">
+              <p class="contact-info__label">Service area</p>
+              <p class="contact-info__value">Your local area and surrounding communities</p>
+            </div>
+            <div class="contact-info__item">
+              <p class="contact-info__label">Hours</p>
+              <p class="contact-info__value">Mon–Fri 8am–6pm<br>Sat 9am–1pm</p>
+            </div>
+          </div>
+
+          <form class="contact-form" action="https://formspree.io/f/xplaceholder" method="POST">
+            <!-- Replace action URL with your Formspree form ID: https://formspree.io -->
+            <input type="hidden" name="_subject" value="New enquiry from Shutterology website">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required autocomplete="name">
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required autocomplete="email">
+
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel">
+
+            <label for="interest">I'm interested in</label>
+            <select id="interest" name="interest">
+              <option value="consultation">Free consultation</option>
+              <option value="quote">Request a quote</option>
+              <option value="general">General question</option>
+            </select>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell us about your windows and what you're looking for…"></textarea>
+
+            <button type="submit" class="btn btn--primary">Send message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <nav class="site-footer__nav" aria-label="Footer navigation">
+      <a href="about.html">About</a>
+      <a href="products.html">Products</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="blog.html">Blog</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <p class="site-footer__copy">&copy; <span id="year"></span> Shutterology. All rights reserved.</p>
+  </footer>
+
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  <script src="js/main.js"></script>
+</body>
+</html>
