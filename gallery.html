@@ -12,15 +12,16 @@
 </head>
 <body>
   <header class="site-header">
-    <a href="index.html" class="brand">      <img
+    <a href="index.html" class="brand brand--logo-only">
+      <img
         class="brand__logo"
-        src="images/logo.svg"
-        alt="Shutterology"
-        width="56"
-        height="56"
+        src="images/logo.png"
+        alt="Shutterology — Bespoke Blinds &amp; Shutters"
+        width="800"
+        height="200"
       >
       <h1 class="brand__name">Shutterology</h1>
-      <p class="brand__tagline">Crafted Excellence</p>
+      <p class="brand__tagline">Bespoke Blinds &amp; Shutters</p>
     </a>
     <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">
       <span class="nav-toggle__bar"></span>
@@ -40,11 +41,15 @@
 
   <main>
     <div class="page-hero">
-      <h2>Our finished projects</h2>
-      <p class="page-hero__subtitle">See the quality and craftsmanship that goes into every installation. Click any photo to enlarge.</p>
+      <h2>Gallery</h2>
+      <p class="page-hero__subtitle">Explore our finished projects in photos and video.</p>
     </div>
 
-    <section class="section">
+    <section class="section" aria-labelledby="photos-heading">
+      <div class="section__header">
+        <h2 id="photos-heading">Installation photos</h2>
+        <p>Click any photo to enlarge.</p>
+      </div>
       <div class="project-grid" data-lightbox>
         <figure class="project-grid__item">
           <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600&q=80&auto=format&fit=crop" alt="Living room with white plantation shutters" width="600" height="600" loading="lazy">
@@ -76,6 +81,17 @@
       </p>
     </section>
 
+    <section class="section section--alt" aria-labelledby="videos-heading">
+      <div class="section__header">
+        <h2 id="videos-heading">Project videos</h2>
+        <p>Watch our installations in action. Click a video to play.</p>
+      </div>
+      <div class="video-grid" data-video-grid>
+        <div class="video-grid__column video-grid__column--youtube" data-youtube-column aria-label="YouTube videos"></div>
+        <div class="video-grid__column video-grid__column--instagram" data-instagram-column aria-label="Instagram reels"></div>
+      </div>
+    </section>
+
     <section class="cta-band">
       <h2>Love what you see?</h2>
       <p>We can achieve the same finish in your home. Start with a free consultation.</p>
@@ -96,6 +112,7 @@
   </footer>
 
   <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  <script src="js/videos.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

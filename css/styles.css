@@ -132,10 +132,15 @@ p:last-child {
 }
 
 .brand__logo {
-  width: 56px;
-  height: 56px;
+  width: clamp(168px, 52vw, 280px);
+  height: auto;
+  aspect-ratio: 4 / 1;
   margin: 0 auto var(--space-2);
   object-fit: contain;
+}
+
+.brand--logo-only .brand__logo {
+  margin-bottom: 0;
 }
 
 .brand--logo-only .brand__name,
@@ -438,6 +443,182 @@ p:last-child {
 
 .project-grid__trigger img {
   pointer-events: none;
+}
+
+/* Video grid */
+.video-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(326px, 340px);
+  gap: var(--space-4);
+  padding: 0 var(--page-padding-x);
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.video-grid__column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.video-grid__column--youtube::before,
+.video-grid__column--instagram::before {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  text-align: center;
+  margin-bottom: var(--space-1);
+}
+
+.video-grid__column--youtube::before {
+  content: "YouTube";
+}
+
+.video-grid__column--instagram::before {
+  content: "Instagram";
+}
+
+.video-card {
+  background: #fff;
+  border: 1px solid var(--color-border);
+}
+
+.video-card__frame {
+  position: relative;
+  width: 100%;
+}
+
+/* Placeholder state (before click) */
+.video-card:not(.is-playing) .video-card__frame {
+  overflow: hidden;
+  background: #111;
+}
+
+.video-card--youtube:not(.is-playing) .video-card__frame {
+  aspect-ratio: 16 / 9;
+}
+
+.video-card--instagram:not(.is-playing) .video-card__frame {
+  aspect-ratio: 9 / 16;
+}
+
+.video-card__trigger {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: none;
+  background: #111;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.video-card__trigger:focus-visible {
+  outline: 2px solid var(--color-text);
+  outline-offset: 2px;
+}
+
+.video-card__thumb {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease, opacity 0.3s ease;
+}
+
+.video-card__trigger:hover .video-card__thumb {
+  transform: scale(1.03);
+  opacity: 0.88;
+}
+
+.video-card__placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-1);
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  padding: var(--space-3);
+  background: linear-gradient(160deg, #2a2a2a 0%, #111 100%);
+  color: #fff;
+  text-align: center;
+}
+
+.video-card__platform {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.video-card__label {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 500;
+}
+
+.video-card__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 56px;
+  height: 56px;
+  margin: -28px 0 0 -28px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.video-card__play::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 54%;
+  transform: translate(-50%, -50%);
+  border-style: solid;
+  border-width: 10px 0 10px 16px;
+  border-color: transparent transparent transparent var(--color-text);
+}
+
+.video-card__trigger:hover .video-card__play {
+  transform: scale(1.06);
+  background: #fff;
+}
+
+/* YouTube playing state */
+.video-card--youtube.is-playing .video-card__frame {
+  display: flex;
+  aspect-ratio: 16 / 9;
+  background: #000;
+}
+
+.video-card--youtube.is-playing .video-card__frame iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Instagram playing state — let embed.js control dimensions */
+.video-card--instagram.is-playing .video-card__frame {
+  overflow: visible;
+  background: #fff;
+}
+
+.video-card--instagram.is-playing .video-card__frame .instagram-media {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  max-width: 100% !important;
 }
 
 /* Lightbox */
@@ -929,6 +1110,11 @@ body.is-lightbox-open {
 
   .contact-grid {
     grid-template-columns: 1fr;
+  }
+
+  .video-grid {
+    grid-template-columns: 1fr;
+    max-width: 520px;
   }
 
   .section {
